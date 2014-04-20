@@ -1,7 +1,9 @@
 .idea
 data
 data/logs
+data/tmp/templates_c
+include/Smarty
+include/Smarty1
 settings.ini
 indexTEST.html
 Zend
-data/tmp/templates_c

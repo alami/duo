@@ -1,5 +1,5 @@
-{include file='header.tpl'}
+{include file='header.php'}
 
 Web site home
 
-{include file='footer.tpl'}
+{include file='footer.php'}

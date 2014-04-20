@@ -1,4 +1,6 @@
 ﻿--20.04.14
+git config core.autocrlf false
+Smarty - {include *.tpl} - not working => exchange with .php
 git init
 git remote add origin ssh://username@example.com/var/git/example.git
 touch changelog
