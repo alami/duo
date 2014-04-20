@@ -5,6 +5,14 @@ touch changelog
 git add changelog
 git commit -a -m"Initital commit"
 git push origin master
+
+git checkout --track -b ch3 origin/master
+git push origin ch3:ch3remote
+git branch ch3 origin/ch3remote
+git checkout ch3
+git merge ch3; git branch -d ch3
+git log --stat --graph
+git reset --hard d857
 --14.04.14--------------------------------------
 ENGINE=InnoDB DEFAULT CHARSET=utf8
 --11.04.14--------------------------------------

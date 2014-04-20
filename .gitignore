@@ -1,4 +1,7 @@
 .idea
+data
+data/logs
+settings.ini
 indexTEST.html
 Zend
 data/tmp/templates_c
