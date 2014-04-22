@@ -10,13 +10,18 @@
             if (isset($session->phrase) && strlen($session->phrase) > 0)
                 $phrase = $session->phrase;
 
-            $captcha = Text_CAPTCHA::factory('Image');
+           //Zend_Registry::get('logger')->debug('ch4-captcha:'.$phrase);
 
             $opts = array('font_size' => 20,
                           'font_path' => Zend_Registry::get('config')->paths->data,
                           'font_file' => 'VeraBd.ttf');
+            $captcha = Text_CAPTCHA::factory('Image');
+Zend_Registry::get('logger')->debug('Err init CAPTCHA: ');
+            $retval=$captcha->init(120, 60, $phrase, $opts);
+            //if (PEAR::isError($retval)) {
 
-            $captcha->init(120, 60, $phrase, $opts);
+                //exit;
+            //}
 
             // write the phrase to session
             $session->phrase = $captcha->getPhrase();

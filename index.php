@@ -10,10 +10,11 @@
     Zend_Registry::set('config', $config);
 
 
+
     // create the application logger
     $logger = new Zend_Log(new Zend_Log_Writer_Stream($config->logging->file));
     Zend_Registry::set('logger', $logger);
-
+//$logger->debug('ch4');
 
     // connect to the database
     $params = array('host'     => $config->database->hostname,
